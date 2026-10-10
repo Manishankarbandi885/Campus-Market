@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Browse - Campus Market</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛍️ Campus Market
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse</a>
+            <a href="sell.html">Sell</a>
+            <a href="about.html">About</a>
+        </div>
+
+        <button class="login-btn">Login</button>
+
+    </nav>
+
+
+    <main>
+
+        <h1>Browse Items</h1>
+
+        <p>Find items being sold by students on your campus.</p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for items...">
+            <button onclick="searchItems()">Search</button>
+        </div>
+        
+
+        <div class="categories">
+            <button onclick="filterCategory('all')">All</button>
+            <button onclick="filterCategory('books')">Books</button>
+            <button onclick="filterCategory('electronics')">Electronics</button>
+            <button onclick="filterCategory('bags')">Bags</button>
+        </div>
+
+    </main>
+    <section class="products">
+
+    <h2>Available Items</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <div class="product-image">📚</div>
+            <h3>Engineering Books</h3>
+            <p>Good condition textbooks</p>
+            <strong>₹500</strong>
+            <button>View Item</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🎧</div>
+            <h3>Wireless Headphones</h3>
+            <p>Used but working perfectly</p>
+            <strong>₹800</strong>
+            <button>View Item</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🎒</div>
+            <h3>College Backpack</h3>
+            <p>Spacious and durable</p>
+            <strong>₹400</strong>
+            <button>View Item</button>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">🖩</div>
+            <h3>Scientific Calculator</h3>
+            <p>Perfect for engineering students</p>
+            <strong>₹600</strong>
+            <button>View Item</button>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
