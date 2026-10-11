@@ -1,96 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Browse - Campus Market</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Items | Campus Market</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <nav class="navbar">
-
-        <div class="logo">
-            🛍️ Campus Market
-        </div>
-
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="browse.html">Browse</a>
-            <a href="sell.html">Sell</a>
-            <a href="about.html">About</a>
-        </div>
-
-        <button class="login-btn">Login</button>
-
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">🛍️ Campus Market</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="browse.html">Browse</a>
+        <a href="sell.html">Sell an Item</a>
+        <a href="about.html">About</a>
+      </div>
+      <a class="nav-cta" href="sell.html">＋ Post an item</a>
     </nav>
+  </header>
 
+  <main>
+    <section class="page-hero container">
+      <span class="eyebrow">The campus marketplace</span>
+      <h1>Find your next <span>good find.</span></h1>
+      <p>Explore affordable items listed by students.</p>
+      <label class="search-bar">
+        🔍
+        <input id="searchInput" type="search" placeholder="Search books, gadgets, bags...">
+        <button id="clearSearch" type="button" hidden>×</button>
+      </label>
+    </section>
 
-    <main>
-
-        <h1>Browse Items</h1>
-
-        <p>Find items being sold by students on your campus.</p>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search for items...">
-            <button onclick="searchItems()">Search</button>
-        </div>
-        
-
-        <div class="categories">
-            <button onclick="filterCategory('all')">All</button>
-            <button onclick="filterCategory('books')">Books</button>
-            <button onclick="filterCategory('electronics')">Electronics</button>
-            <button onclick="filterCategory('bags')">Bags</button>
-        </div>
-
-    </main>
-    <section class="products">
-
-    <h2>Available Items</h2>
-
-    <div class="product-container">
-
-        <div class="product-card">
-            <div class="product-image">📚</div>
-            <h3>Engineering Books</h3>
-            <p>Good condition textbooks</p>
-            <strong>₹500</strong>
-            <button>View Item</button>
+    <section class="section container">
+      <div class="browse-toolbar">
+        <div class="filter-tabs">
+          <button class="filter-chip active" data-category="all">All items</button>
+          <button class="filter-chip" data-category="books">📚 Books</button>
+          <button class="filter-chip" data-category="electronics">🎧 Electronics</button>
+          <button class="filter-chip" data-category="bags">🎒 Bags</button>
+          <button class="filter-chip" data-category="other">✦ Other</button>
         </div>
 
-        <div class="product-card">
-            <div class="product-image">🎧</div>
-            <h3>Wireless Headphones</h3>
-            <p>Used but working perfectly</p>
-            <strong>₹800</strong>
-            <button>View Item</button>
-        </div>
+        <label class="sort-control">Sort by
+          <select id="sortSelect">
+            <option value="newest">Recently added</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </label>
+      </div>
 
-        <div class="product-card">
-            <div class="product-image">🎒</div>
-            <h3>College Backpack</h3>
-            <p>Spacious and durable</p>
-            <strong>₹400</strong>
-            <button>View Item</button>
-        </div>
+      <div class="results-line">
+        <span id="resultsCount">Loading items...</span>
+        <button id="resetFilters" class="text-link">Reset filters</button>
+      </div>
 
-        <div class="product-card">
-            <div class="product-image">🖩</div>
-            <h3>Scientific Calculator</h3>
-            <p>Perfect for engineering students</p>
-            <strong>₹600</strong>
-            <button>View Item</button>
-        </div>
+      <div id="browseProducts" class="product-grid"></div>
 
+      <div id="emptyState" class="empty-state" hidden>
+        <div>🧺</div>
+        <h2>No items found</h2>
+        <p>Try another search or list an item yourself.</p>
+        <a class="button button-primary" href="sell.html">Post an item</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html">🛍️ Campus Market</a>
+      <p>Made for campus life. Built around reuse.</p>
+      <span>© <span data-year></span> Campus Market</span>
     </div>
+  </footer>
 
-</section>
-
-<script src="script.js"></script>
-
+  <dialog id="itemDialog" class="item-dialog">
+    <button class="dialog-close" aria-label="Close details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
 </body>
 </html>

@@ -1,95 +1,83 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-<title>Campus Market</title>
-
-<link rel="stylesheet" href="style.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Market | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">🛍️ Campus Market</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a>
+        <a href="browse.html">Browse</a>
+        <a href="sell.html">Sell an Item</a>
+        <a href="about.html">About</a>
+      </div>
+      <a class="nav-cta" href="sell.html">＋ Post an item</a>
+    </nav>
+  </header>
 
-
-<!-- Navigation Bar -->
-<nav class="navbar">
-
-    <div class="logo">
-        🛍️ Campus Market
-    </div>
-
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Browse</a>
-        <a href="#">Sell</a>
-        <a href="#">About</a>
-    </div>
-
-    <button class="login-btn">Login</button>
-
-</nav>
-
-
-<!-- Main Content -->
-<main>
-    <h1>Buy & Sell Within Your Campus</h1>
-
-<p>
-    Find affordable second-hand items from students in your college.
-</p>
-
-<div class="hero-buttons">
-    <a href="browse.html">Browse Items</a>
-    <a href="sell.html">Sell an Item</a>
-</div>
-
-
-</main>
-
-<section class="products">
-    <h2>Featured Products</h2>
-
-    <div class="product-container">
-
-        <div class="product-card">
-            <div class="product-image">📚</div>
-            <h3>Engineering Books</h3>
-            <p>Good condition textbooks</p>
-            <strong>₹500</strong>
-            <button>View Item</button>
-            
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">Your campus. Your marketplace.</span>
+        <h1>Good finds.<br><span>Better campus life.</span></h1>
+        <p>Buy affordable second-hand essentials and give unused items a new home within your student community.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="browse.html">Explore items →</a>
+          <a class="button button-secondary" href="sell.html">Sell an item</a>
         </div>
+        <p>✓ Simple listings · Student-friendly prices</p>
+      </div>
+      <div class="hero-art">
+        <div class="art-card">📚<h3>Books & Notes</h3></div>
+        <div class="art-card">🎧<h3>Tech & Gadgets</h3></div>
+        <div class="art-card">🎒<h3>Bags & Essentials</h3></div>
+        <div class="art-center">🛍️</div>
+      </div>
+    </section>
 
-        <div class="product-card">
-            <div class="product-image">🎧</div>
-            <h3>Wireless Headphones</h3>
-            <p>Used but working perfectly</p>
-            <strong>₹800</strong>
-            <button>View Item</button>
+    <section class="trust-strip">
+      <div class="container trust-items">
+        <div><strong>♻️ Reuse more</strong><p>Give items another life</p></div>
+        <div><strong>🎓 Made for students</strong><p>Campus-focused listings</p></div>
+        <div><strong>💸 Budget friendly</strong><p>Discover affordable finds</p></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A few good finds</span>
+          <h2>Featured items</h2>
+          <p>Explore campus essentials.</p>
         </div>
+        <a class="text-link" href="browse.html">Browse everything →</a>
+      </div>
+      <div id="featuredProducts" class="product-grid"></div>
+    </section>
 
-        <div class="product-card">
-            <div class="product-image">🎒</div>
-            <h3>College Backpack</h3>
-            <p>Spacious and durable</p>
-            <strong>₹400</strong>
-            <button>View Item</button>
-        </div>
+    <section class="sell-banner container">
+      <div>
+        <h2>Have something you don't use?</h2>
+        <p>List it and help another student find what they need.</p>
+      </div>
+      <a class="button button-light" href="sell.html">List your item →</a>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="index.html">🛍️ Campus Market</a>
+      <p>Made for campus life. Built around reuse.</p>
+      <span>© <span data-year></span> Campus Market</span>
     </div>
-</section>
-
-
-
-<script src="script.js"></script>
-
-
+  </footer>
 </body>
-
 </html>
