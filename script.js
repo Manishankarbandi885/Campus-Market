@@ -1,8 +1,4 @@
 
-/* =========================
-   CAMPUS MARKET - JAVASCRIPT
-========================= */
-
 const STORAGE_KEY = "campusMarketProducts";
 
 const sampleProducts = [
